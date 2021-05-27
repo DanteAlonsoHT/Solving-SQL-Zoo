@@ -91,3 +91,32 @@ WHERE LEFT(name,1) = LEFT(capital,1) AND NOT name = capital
 SELECT name
 FROM world
 WHERE name LIKE '%a%' AND name LIKE '%e%' AND name LIKE '%i%' AND name LIKE '%o%' AND name LIKE '%u%' AND NOT name LIKE '% %'
+
+/* QUIZ 2 */
+
+SELECT name
+FROM world
+WHERE name LIKE 'U%'
+
+SELECT population
+FROM world
+WHERE name = 'United Kingdom'
+
+SELECT continent 
+FROM world 
+WHERE name = 'France'
+
+SELECT name, population / 10 
+FROM world 
+WHERE population < 10000
+
+SELECT name, population
+FROM world
+WHERE continent IN ('Europe', 'Asia')
+
+SELECT name FROM world
+WHERE name IN ('Cuba', 'Togo')
+
+SELECT name FROM world
+WHERE continent = 'South America'
+AND population > 40000000
